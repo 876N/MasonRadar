@@ -1,7 +1,6 @@
 # MasonRadar
 
-Real-time process inspection tool that monitors network activity and extracts hidden URLs and IPs from process memory     
-ByABOLHB
+Real-time process inspection tool that monitors network activity and extracts hidden URLs and IPs from process memory
 ## Screenshots
 
 When you first open MasonRadar you see a clean drop zone where you can drag and drop any executable or click to browse for one
