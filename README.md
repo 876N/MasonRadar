@@ -2,8 +2,10 @@
 
 Real-time process inspection tool that monitors network activity, detects API hooks, scans for XOR-encoded strings, finds embedded payloads, and extracts hidden URLs and IPs from process memory
 
-![Tool](https://i.ibb.co/DD4zZZ4V/image.png)
+[![Download 32-bit](https://img.shields.io/badge/Download-Win32-blue?style=for-the-badge)](https://github.com/876N/MasonRadar/releases/download/Release/MasonRadar-win32.zip)
+[![Download 64-bit](https://img.shields.io/badge/Download-Win64-blue?style=for-the-badge)](https://github.com/876N/MasonRadar/releases/download/Release/MasonRadar-win64.zip)
 
+![Tool](https://i.ibb.co/DD4zZZ4V/image.png)
 ## What it does
 
 MasonRadar launches any Windows executable in a restricted low-integrity environment and watches everything it does at runtime. It tracks all TCP and UDP connections with automatic protocol detection, scans process memory for URLs, domains, and IP addresses in both ASCII and UTF-16 encodings, detects API hooking by reading the first bytes of critical Windows functions, finds XOR-encoded strings by brute-forcing single-byte keys against known patterns, identifies encrypted or packed memory regions through Shannon entropy analysis, lists all loaded DLLs and flags suspicious modules like sandbox detectors or hooking frameworks, extracts file paths and registry keys the process accesses, and locates embedded PE executables hidden in memory that can be exported as files. Everything accumulates over time and nothing disappears until you press Clear.
@@ -48,7 +50,7 @@ For payload detection it scans memory for the MZ signature (0x4D5A) followed by 
 
 For restricted execution it uses CreateRestrictedToken with DISABLE_MAX_PRIVILEGE to strip most privileges from the child process token, then lowers the integrity level to Low using SetTokenInformation.
 
-## Building
+## Building from Source
 
 Open src\MasonRadar.dproj in Embarcadero RAD Studio or Delphi 12 and press F9. No external libraries or packages are required.
 
